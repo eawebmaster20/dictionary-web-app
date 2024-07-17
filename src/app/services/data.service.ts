@@ -20,14 +20,6 @@ export class DataService {
         phonetic: "/ˈkiːbɔːd/",
         phonetics: [
             {
-                text: "/ˈkiːbɔːd/",
-                audio: ""
-            },
-            {
-                "text": "/ˈkiːbɔːd/",
-                "audio": ""
-            },
-            {
                 "text": "/ˈkibɔɹd/",
                 "audio": "https://api.dictionaryapi.dev/media/pronunciations/en/keyboard-us.mp3",
                 "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=1755168",
@@ -35,6 +27,14 @@ export class DataService {
                     "name": "BY-SA 3.0",
                     "url": "https://creativecommons.org/licenses/by-sa/3.0"
                 }
+            },
+            {
+                text: "/ˈkiːbɔːd/",
+                audio: ""
+            },
+            {
+                "text": "/ˈkiːbɔːd/",
+                "audio": ""
             }
         ],
         meanings: [
@@ -90,6 +90,12 @@ export class DataService {
     this.apiService.getWord(this.searchTerm).subscribe(
         (res)=>{
             this.currentWord=res[0]; 
+            for (let i = 0; i < this.currentWord.phonetics.length; i++) {
+                if (this.currentWord.phonetics[i].audio.length) {
+                    this.currentWord.phonetics[0]=this.currentWord.phonetics[i];
+                    return;
+                }
+            }
             console.log(res)
         },
         (err) => {

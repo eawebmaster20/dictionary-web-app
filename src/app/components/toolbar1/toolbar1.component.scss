@@ -13,3 +13,13 @@
         display: flex;
     }
 }
+select{
+    border: none;
+    background: transparent;
+    & ::after{
+        background-color: red;
+    }
+    & ::before{
+        background-color: blue;
+    }
+}

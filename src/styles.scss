@@ -17,7 +17,7 @@ body{
     margin: 0;
 }
 .heading-l{
-    font-size: 4rem;
+    font-size: 34px;
     line-height: 72px;
     font-weight: bold;
 }
@@ -50,7 +50,31 @@ body{
     }
 }
 .dark-mode{
+    color: var(--grey-level-1);
+    background-color: var(--grey-level-8);
+    .type-meaning, .synonyms, .examples{
+        color: var(--grey-level-3);
+    }
     .switch-toggle{
         background-color: var(--voilet);
     }
+}
+@media only screen and (min-width: 768px) {
+    .heading-l{
+    font-size: 4rem;
+    line-height: 72px;
+    font-weight: bold;
+}
+.heading-m{
+    font-size: 1.5rem;
+    line-height: 29px;
+}
+.heading-s{
+    font-size: 20px;
+    line-height: 24px;
+}
+.body-m{
+    font-size: 18px;
+    line-height: 24px;
+}
 }

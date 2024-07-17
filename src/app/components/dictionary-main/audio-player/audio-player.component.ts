@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../../../services/data.service';
 
 @Component({
   selector: 'app-audio-player',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './audio-player.component.scss'
 })
 export class AudioPlayerComponent {
-
+constructor(public dataService: DataService){}
 }
