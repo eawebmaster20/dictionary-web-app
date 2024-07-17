@@ -1,3 +1,15 @@
 .main-container{
     display: flex;
+    height: 2.1rem;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.right-container{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 1.5rem;
+    .theme-toggler{
+        display: flex;
+    }
 }
