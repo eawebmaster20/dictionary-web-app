@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Toolbar1Component } from './components/toolbar1/toolbar1.component';
-import { Toolbar2Component } from './components/toolbar2/toolbar2.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { DictionaryMainComponent } from './components/dictionary-main/dictionary-main.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Toolbar1Component, Toolbar2Component],
+  imports: [RouterOutlet, Toolbar1Component, SearchBarComponent,DictionaryMainComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
