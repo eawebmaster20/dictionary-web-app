@@ -9,6 +9,8 @@ export class DataService {
   searchTerm:string='';
   lightThemeSet:boolean = false;
   currentTheme:string='light-mode';
+  selectedFont:string='mono'
+  fontFamilies:string[]=['sans serif','serif','mono']
   httpError:Respose404Error={
     message:'',
     title:'',

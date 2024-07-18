@@ -10,5 +10,10 @@ import { DataService } from '../../services/data.service';
   styleUrl: './toolbar1.component.scss'
 })
 export class Toolbar1Component {
+  showDropDown:boolean = false
 constructor(public dataService: DataService){}
+
+toggleDropdown(){
+  this.showDropDown = !this.showDropDown;
+}
 }
