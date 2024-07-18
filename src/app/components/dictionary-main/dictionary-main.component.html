@@ -1,11 +1,5 @@
 <div [class]="dataService.currentTheme" class="keyword-container align-c flex-it">
-    <div class="col w-100 align-c flex-it">
-        <div class="word flex-it">
-            <span class="heading-l">{{dataService.currentWord.word}}</span>
-            <span class="phonetic heading-m">{{dataService.currentWord.phonetic}}</span>
-        </div>
-        <app-audio-player></app-audio-player>
-    </div>
+    
     @if (dataService.httpError.message!.length>0) {
         <div class="definition-404">
             <span>😕</span>
@@ -14,6 +8,13 @@
         </div>
     }
     @else {
+    <div class="col w-100 align-c flex-it">
+        <div class="word flex-it">
+            <span class="heading-l">{{dataService.currentWord.word}}</span>
+            <span class="phonetic heading-m">{{dataService.currentWord.phonetic}}</span>
+        </div>
+        <app-audio-player></app-audio-player>
+    </div>
         @for(meaning of dataService.currentWord.meanings; track meaning){
             <div class="types flex-it">
                 <span class="type-name heading-m flex-it">{{meaning.partOfSpeech}}
@@ -35,7 +36,7 @@
                         <span class="synonym-name heading-s">Synonyms</span>
                     }
                     @for (synonym of meaning.synonyms; track synonym;) {
-                        <span class="synonym-list heading-s">{{synonym}}</span>
+                        <span (click)="dataService.getNewWord($event)" class="synonym-list heading-s">{{synonym}}</span>
                     }
                 </div>
             </div>

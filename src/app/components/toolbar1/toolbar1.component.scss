@@ -9,7 +9,6 @@
     align-items: center;
     margin-left: auto;
     font-weight: bold;
-    gap: 1.5rem;
     & :first-child{
         gap: 1.5rem;
     }
@@ -36,4 +35,10 @@
             height: 300px;
         }
     }
+}
+.separator{
+    width: 1px;
+    background-color: var(--grey-level-2);
+    height: 100%;
+    margin: 0 1rem;
 }
