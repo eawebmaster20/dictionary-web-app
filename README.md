@@ -1,3 +1,12 @@
+1. voca
+    -categories
+        -everyday words
+        -...other common words
+2. sentence
+    - arrange words to create a sentence
+    - tanslation
+3. dialog
+
 # DictionaryWebApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.

@@ -14,6 +14,9 @@
     --warn:#FF5252;
     height: 100%
 }
+.search-container{
+    height: 48px;
+}
 body{
     margin: 0;
     height: 100%;
@@ -69,7 +72,22 @@ app-root{
         height: 100%;
     }
 }
-
+.player-container{
+    width: 48px;
+    height: 48px;
+    background-color: #e8d1fbe0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img{
+        position: absolute;
+        left: 45%;
+        width: 13px;
+        height: 13px;
+    }
+}
 .light-mode{
     .switch-toggle{
         background-color: var(--grey-level-3);
@@ -114,22 +132,36 @@ app-root{
     font-size: 64px;
     line-height: 72px;
     font-weight: bold;
-}
-.heading-m{
-    font-size: 1.5rem;
-    line-height: 29px;
-}
-.heading-s{
-    font-size: 20px;
-    line-height: 24px;
-}
-.body-m{
-    font-size: 18px;
-    line-height: 24px;
-}
-.type-name{
-    gap: 38px;
-}
+    }
+    .search-container{
+        height: 64px;
+    }
+    .heading-m{
+        font-size: 1.5rem;
+        line-height: 29px;
+    }
+    .heading-s{
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .body-m{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .type-name{
+        gap: 38px;
+    }
+    .player-container{
+        width: 75px;
+        height: 75px;
+        
+        img{
+            left: 40%;
+            width: 21px;
+            height: 21px;
+        }
+    }
+    
 }
 
 @media only screen and (min-width: 995px) {
@@ -139,6 +171,10 @@ app-root{
     }
     .media-query-container{
         width: 738px;
-        gap: 50px;
+        gap: 52px;
     }
+}
+
+li::marker{
+    color: var(--voilet)
 }

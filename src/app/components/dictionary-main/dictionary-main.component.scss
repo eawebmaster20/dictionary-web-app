@@ -53,3 +53,16 @@
 .phonetic, .synonym-list{
     color: var(--voilet);
 }
+
+.definition-404{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.not-found-icon{
+    justify-content: center;
+    img{
+        width: 64px;
+        height: 64px;
+    }
+}

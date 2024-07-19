@@ -1,7 +1,7 @@
-<div class="search-container">
-        <input class="heading-s" [(ngModel)]="dataService.searchTerm" placeholder="Search for any word…" (keydown.enter)="dataService.getNewWord()" type="text">
+<div class="search-container" [class]="dataService.validation? 'validtion-err':''">
+        <input [style.fontFamily]="dataService.selectedFont.value" class="heading-s" [(ngModel)]="dataService.searchTerm" placeholder="Search for any word…" (keydown.enter)="dataService.getNewWord()" type="text">
     <img (click)="dataService.getNewWord()" src="assets/images/icon-search.svg" alt=" search-icon" srcset="">
 </div>
 @if (dataService.validation) {
-    <span class="null-error">Please enter a valid email address</span>
+    <span class="null-error">Whoops, can't be empty</span>
 }

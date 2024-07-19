@@ -3,12 +3,12 @@
     <div class="right-container">
         <div (click)="dataService.toggleDropdown()" class="flex-it">
             <label class="heading-s" for="select">{{dataService.selectedFont.name}}</label>
-            <img src="assets/images/select-icon.svg" alt="" srcset="">
+            <img src="assets/images/select-icon.svg" alt="select icon" srcset="">
         </div>
         <div class="drop-down">
             <div [class]="dataService.showDropDown ? 'show':'hide'" class="select-dropdown flex-it">
                 @for (font of dataService.fontFamilies; track font) {
-                    <span #font (click)="dataService.changeFont($event)" class="heading-s">{{font}}</span>
+                    <span #font (click)="dataService.changeFont($event)" class="heading-s children">{{font}}</span>
                 }
             </div>
         </div>

@@ -1,8 +1,10 @@
 <div class="keyword-container align-c flex-it">
     
     @if (dataService.httpError.message!.length>0) {
-        <div class="definition-404">
-            <span>😕</span>
+        <div class="definition-404 flex-it">
+            <span class="not-found-icon flex-it">
+                <img src="assets/images/not found.png" alt="404 icon">
+            </span>
             <p>{{dataService.httpError.message}}</p>
             <p>{{dataService.httpError.resolution}}</p>
         </div>
@@ -23,7 +25,7 @@
                 <span class="type-meaning heading-s">Meaning</span>
                 <ul>
                     @for (def of meaning.definitions; track def) {
-                        <li class="flex-it definition-items">
+                        <li class="definition-items">
                             <span class="body-m">{{def.definition}}</span>
                         </li>
                         <p>

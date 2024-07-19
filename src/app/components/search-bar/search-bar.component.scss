@@ -2,10 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 48px;
     border-radius: 1rem;
     padding: 0 16px;
-    
+    transition:border .5s ease-out;
     input{
         height: 55px;
         width: 100%;
@@ -16,7 +15,13 @@
     input:focus{
         outline: none;
     }
+    img{
+        cursor: pointer;
+    }
 }
 .null-error{
     color: var(--warn);
+}
+.validtion-err{
+    border: 2px solid var(--warn);
 }

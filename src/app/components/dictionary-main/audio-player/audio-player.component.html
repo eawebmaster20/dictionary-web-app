@@ -2,6 +2,7 @@
     <img src="assets/images/icon-play.svg" alt="" srcset="">
 </div> -->
 <div (click)="audi.play()" class="player-container">
-    <img src="assets/images/icon-play.svg" alt="" srcset="">
+    <img class="first-icon" src="assets/images/play-icon-dark.svg" alt="audio icon" srcset="">
+    <img class="second-icon" src="assets/images/icon-play-lite.svg" alt="audio icon" srcset="">
 </div>
 <audio #audi [src]="dataService.currentWord.phonetics[0].audio"></audio>

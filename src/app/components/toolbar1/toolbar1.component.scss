@@ -27,6 +27,12 @@
         width: 150px;
         border-radius: 16px;
         // overflow: hidden;
+        .children{
+            &:hover{
+                color: var(--voilet);
+                cursor: pointer;
+            }
+        }
     }
 }
 .drop-down{
@@ -42,11 +48,12 @@
     opacity: 1;
     overflow: hidden;
     height: auto;
-    transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 .hide{
     height: 50px;
     opacity: 0;
     overflow: hidden;
-    transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+    display: none;
+    transition: opacity 0.1s ease-in-out, height 0.5s ease-in-out;
 }
