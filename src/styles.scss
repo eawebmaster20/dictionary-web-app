@@ -12,9 +12,15 @@
     --grey-level-8:#050505;
     --voilet:#a445ED;
     --warn:#FF5252;
+    height: 100%
 }
 body{
     margin: 0;
+    height: 100%;
+}
+app-root{
+    height: 100%;
+    display: flex;
 }
 .heading-l{
     font-size: 34px;
@@ -43,21 +49,25 @@ body{
 .w-100{
     width: 100%;
 }
-.show{
-    display: flex;
-}
-.hide{
-    display: none;
-}
+
 .type-name{
     gap: 1.5rem;
 }
 .media-query-container{
     height: 100%;
-    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+
+    app-dictionary-main{
+        overflow-y: scroll;
+    }
+    app-dictionary-main::-webkit-scrollbar {
+        display: none;
+      }
+    app-dictionary-main{
+        height: 100%;
+    }
 }
 
 .light-mode{
@@ -72,12 +82,12 @@ body{
         background-color: var(--grey-level-1);
         border: 2px solid var(--grey-level-2);
     }
-    transition: background-color 1s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
 }
 .dark-mode{
     color: var(--grey-level-1);
     background-color: var(--grey-level-8);
-    transition: background-color 1s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
     .type-meaning, .synonyms, .examples{
         color: var(--grey-level-3);
     }

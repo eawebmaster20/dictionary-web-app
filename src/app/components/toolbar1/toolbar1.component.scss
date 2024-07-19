@@ -26,19 +26,27 @@
         z-index: 20;
         width: 150px;
         border-radius: 16px;
+        // overflow: hidden;
     }
 }
 .drop-down{
     position: relative;
-    & :hover{
-        .select-dropdown{
-            height: 300px;
-        }
-    }
 }
 .separator{
     width: 1px;
     background-color: var(--grey-level-2);
     height: 100%;
     margin: 0 1rem;
+}.show{
+    display: flex;
+    opacity: 1;
+    overflow: hidden;
+    height: auto;
+    transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+.hide{
+    height: 50px;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
 }
