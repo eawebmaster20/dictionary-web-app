@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AudioPlayerComponent } from './audio-player.component';
+import { DataService } from '../../../services/data.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AudioPlayerComponent', () => {
   let component: AudioPlayerComponent;
@@ -8,7 +10,8 @@ describe('AudioPlayerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AudioPlayerComponent]
+      imports: [AudioPlayerComponent, HttpClientTestingModule],
+      providers:[DataService]
     })
     .compileComponents();
     

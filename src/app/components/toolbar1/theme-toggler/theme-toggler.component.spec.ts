@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ThemeTogglerComponent } from './theme-toggler.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ThemeTogglerComponent', () => {
   let component: ThemeTogglerComponent;
@@ -8,7 +9,7 @@ describe('ThemeTogglerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ThemeTogglerComponent]
+      imports: [ThemeTogglerComponent,HttpClientTestingModule]
     })
     .compileComponents();
     

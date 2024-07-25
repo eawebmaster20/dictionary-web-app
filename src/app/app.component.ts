@@ -14,4 +14,7 @@ import { Toolbar1Component } from './components/toolbar1/toolbar1.component';
 })
 export class AppComponent {
   constructor(public dataService:DataService){}
+  hidedropdown(){
+    this.dataService.showDropDown = false
+  }
 }
